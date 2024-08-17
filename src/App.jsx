@@ -3,6 +3,11 @@ import EventBinding from './component/eventHandler/eventBinding';
 import EventHandler from './component/eventHandler/eventHandler';
 import Hero from './component/errorBoundary/hero';
 import ErrorBoundary from './component/errorBoundary/errorBoundary';
+import WithCounter from './component/high order component/withCounter';
+import HoverCounter from './component/high order component/hoverCounter';
+import ClickCounter from './component/high order component/clickCounter';
+import Counter from './component/Render Props/counter';
+import ClickCountertwo from './component/Render Props/clickCountertwo';
 
 
 
@@ -17,9 +22,9 @@ class App extends Component {
     return (
       <div>
         {/* <EventHandler/> */}
-        <EventBinding />
+        {/* <EventBinding />
 
-
+//------------------Error boundary--------------------------------------
         <ErrorBoundary>
           <Hero name="Suparman" />
         </ErrorBoundary>
@@ -28,7 +33,24 @@ class App extends Component {
         </ErrorBoundary>
         <ErrorBoundary>
           <Hero name="joker" />
-        </ErrorBoundary>
+        </ErrorBoundary> */}
+
+        {/* //------------------Higher order component-------------------------------------- */}
+        {/* <HoverCounter />
+        <ClickCounter/> */}
+
+
+        {/* ------------------Render props-------------------------------------- */}
+
+        <Counter render={(count, countHandler) => (
+          <ClickCountertwo count={count} countHandler={countHandler} />
+        )
+        } />
+
+        <Counter render={(count, countHandler) => (
+          <HoverCounter count={count} countHandler={countHandler} />
+        )
+        } />
       </div>
     )
   }
