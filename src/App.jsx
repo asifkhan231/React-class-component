@@ -42,7 +42,7 @@ class App extends Component {
 
         {/* ------------------Render props-------------------------------------- */}
 
-        <Counter render={(count, countHandler) => (
+        {/*<Counter render={(count, countHandler) => (
           <ClickCountertwo count={count} countHandler={countHandler} />
         )
         } />
@@ -50,7 +50,7 @@ class App extends Component {
         <Counter render={(count, countHandler) => (
           <HoverCounter count={count} countHandler={countHandler} />
         )
-        } />
+        } />*/}
       </div>
     )
   }
